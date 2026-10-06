@@ -4,7 +4,9 @@ from main import NoteManager
 
 # Khởi tạo MCP Server và kết nối với Vault
 mcp = FastMCP("Obsidian-Knowledge-Agent")
-manager = NoteManager(r"C:\stuff\NCKH")
+
+OBSIDIAN_VAULT="C:\stuff\NCKH"
+manager = NoteManager(OBSIDIAN_VAULT)
 
 @mcp.tool()
 def search_vault(keyword: str) -> list[str]:
