@@ -1,7 +1,10 @@
 from typing import Any
 
+from llm import LLM
+
+
 class Agent:
-    def __init__(self, name:str, llm: Any, mcp:Any):
+    def __init__(self, name:str, llm: LLM, mcp):
         self.name = name
         self.llm = llm
         self.mcp = mcp
