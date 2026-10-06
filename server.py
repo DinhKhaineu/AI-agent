@@ -5,7 +5,7 @@ from main import NoteManager
 # Khởi tạo MCP Server và kết nối với Vault
 mcp = FastMCP("Obsidian-Knowledge-Agent")
 
-OBSIDIAN_VAULT="C:\stuff\NCKH"
+OBSIDIAN_VAULT= r"C:\stuff\NCKH"
 manager = NoteManager(OBSIDIAN_VAULT)
 
 @mcp.tool()
