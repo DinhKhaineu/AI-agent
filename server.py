@@ -12,10 +12,10 @@ manager = NoteManager(OBSIDIAN_VAULT)
 def search_vault(keyword: str) -> list[str]:
     """
     Tìm kiếm ghi chú theo từ khóa trong toàn bộ Obsidian vault.
-    Trả về danh sách tên các ghi chú khớp với từ khóa.
+    Trả về danh sách đường dẫn tương đối của các ghi chú khớp.
     """
     results = manager.search_notes(keyword)
-    return [p.name for p in results]
+    return [str(p.relative_to(manager.vault)) for p in results]
 
 @mcp.tool()
 def read_note_content(note_name: str) -> str:
